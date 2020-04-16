@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Veterinarios.Models;
+using Vets.Models;
 
-namespace Veterinarios.Controllers
+namespace Vets.Controllers
 {
     public class HomeController : Controller
     {

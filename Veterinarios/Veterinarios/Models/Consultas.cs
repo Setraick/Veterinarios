@@ -5,10 +5,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Veterinarios.Models
+namespace Vets.Models
 {
     public class Consultas
     {
+
         [Key]
         public int ID { get; set; }
 
@@ -16,15 +17,19 @@ namespace Veterinarios.Models
 
         public string Observacoes { get; set; }
 
-
-        [ForeignKey(nameof(Animal))]  //nameof() -> devolve a designação do objeto que é colocado no parâmetro 
+        //**********************************************
+        // definir FKs
+        //**********************************************
+        // FK ---> Animais
+        [ForeignKey(nameof(Animal))] // nameof() -> devolve a designação (como string) do objeto que é colocado como parâmetro
         public int AnimalFK { get; set; }
         public Animais Animal { get; set; }
 
-        [ForeignKey(nameof(Veterinarios))]
+        // FK ---> Veterinários
+        [ForeignKey(nameof(Veterinario))]
         public int VeterinarioFK { get; set; }
-        public Veterinarios Veterinarios { get; set; }
+        public Veterinarios Veterinario { get; set; }
+
 
     }
 }
-    

@@ -1,6 +1,6 @@
 using System;
 
-namespace Veterinarios.Models
+namespace Vets.Models
 {
     public class ErrorViewModel
     {
